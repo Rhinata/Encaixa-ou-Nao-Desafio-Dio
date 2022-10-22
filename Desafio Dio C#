@@ -1,0 +1,33 @@
+using System.IO;
+using System.Linq;
+using System;
+
+class Example 
+{
+    static void Main(string[] args)
+    {
+        int qt = int.Parse(Console.ReadLine());
+        string[] v = new string[2];
+// TODO: Crie as outras condições necessárias para a resolução do desafio:
+        for (int i = 0; i < qt; ++i) 
+        {
+          v = Console.ReadLine().Split(" ");
+          
+            string ValorA = v[0];
+            string ValorB = v[1];
+
+            if (ValorB.Length > ValorA.Length)
+            
+              Console.WriteLine("nao encaixa");
+            
+            else if (ValorA.EndsWith(ValorB))
+            
+              Console.WriteLine("encaixa");
+            
+            else
+            
+              Console.WriteLine("nao encaixa");
+            
+        }
+    }
+}
